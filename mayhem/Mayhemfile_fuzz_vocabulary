@@ -1,0 +1,9 @@
+project: savantenvs/CTranslate2
+target: fuzz_vocabulary
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_vocabulary/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_vocabulary
+    libfuzzer: true
+    timeout: 20

@@ -1,0 +1,9 @@
+project: savantenvs/CTranslate2
+target: fuzz_model_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_model_load/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_model_load
+    libfuzzer: true
+    timeout: 60

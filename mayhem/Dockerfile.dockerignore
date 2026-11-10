@@ -1,0 +1,7 @@
+# Used instead of upstream's whitelist .dockerignore (which would drop mayhem/ and .git):
+# bake the FULL repo, including .git history, into the commit image.
+build/
+build-*/
+install-*/
+*.pyc
+**/.DS_Store
